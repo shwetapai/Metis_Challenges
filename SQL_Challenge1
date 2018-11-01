@@ -1,0 +1,8 @@
+Which customers are from the UK?
+
+'''SELECT
+    * 
+FROM
+    Customers
+WHERE
+    City='Madrid';'''
