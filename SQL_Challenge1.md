@@ -12,11 +12,11 @@
 
 ``` SELECT OrderID, CustomerName, COUNT() AS OrderTimes ```
 
-  ```FROM Orders JOIN Customers ON Orders.CustomerID == Customers.CustomerID ```
+```FROM Orders JOIN Customers ON Orders.CustomerID == Customers.CustomerID ```
   
-    ```GROUP BY CustomerName```
+```GROUP BY CustomerName```
     
-    ```ORDER BY OrderTimes DESC```
+```ORDER BY OrderTimes DESC```
     
     
     
@@ -26,11 +26,11 @@
 
 ``` SELECT SupplierName, AVG(Price) AS Average ```
 
-   ```FROM Suppliers JOIN Products ON Suppliers.SupplierID == Products.SupplierID```
+ ```FROM Suppliers JOIN Products ON Suppliers.SupplierID == Products.SupplierID```
    
-   ```GROUP BY SupplierName```
+ ```GROUP BY SupplierName```
    
-  ``` ORDER BY Average DESC ```
+ ``` ORDER BY Average DESC ```
    
  
 **4.How many different countries are all the customers from? (ANS:21)**
@@ -44,13 +44,13 @@
 
 ```SELECT CategoryName, COUNT(OrderID) AS OrderCount  FROM [OrderDetails] ```
 
-   ```JOIN Products ON OrderDetails.ProductID == Products.ProductID ```
+ ```JOIN Products ON OrderDetails.ProductID == Products.ProductID ```
    
-  ```JOIN Categories ON Products.CategoryID == Categories.CategoryID ```
+ ```JOIN Categories ON Products.CategoryID == Categories.CategoryID ```
   
-   ```GROUP BY CategoryName```
+ ```GROUP BY CategoryName```
    
-   ```ORDER BY OrderCount DESC```
+ ```ORDER BY OrderCount DESC```
    
    
    
@@ -58,27 +58,27 @@
  
  ```SELECT OrderID, SUM(Price) AS TotalCost FROM [OrderDetails] ```
  
-    ```JOIN Products ON OrderDetails.ProductID == Products.ProductID```
+ ```JOIN Products ON OrderDetails.ProductID == Products.ProductID```
     
-    ```GROUP BY OrderID```
+ ```GROUP BY OrderID```
     
-    ```ORDER BY TotalCost DESC```
+ ```ORDER BY TotalCost DESC```
     
     
     
 **7.Which employee made the most sales (by total cost)?(ANS:Peacock Margaret)**
 
-```SELECT LastName,FirstName,SUM(Price*Quantity) AS TotalSales FROM Orders
+```SELECT LastName,FirstName,SUM(Price*Quantity) AS TotalSales FROM Orders```
 
-    JOIN Employees ON Orders.EmployeeID ==Employees.EmployeeID
+```JOIN Employees ON Orders.EmployeeID ==Employees.EmployeeID```
    
-    JOIN OrderDetails ON Orders.OrderID == OrderDetails.OrderID
+```JOIN OrderDetails ON Orders.OrderID == OrderDetails.OrderID```
    
-   JOIN Products On OrderDetails.ProductID == Products.ProductID
+```JOIN Products On OrderDetails.ProductID == Products.ProductID```
    
-   GROUP BY Employees.EmployeeID
+```GROUP BY Employees.EmployeeID```
   
-   ORDER BY TotalSales DESC ```
+```ORDER BY TotalSales DESC ```
   
   
    
@@ -94,12 +94,12 @@
  
  ```SELECT SupplierName,COUNT(ProductID) AS NumberOfProducts, AVG(Price) AS AvgPrice FROM [Products]```
  
-    ```JOIN Suppliers ON Products.SupplierID == Suppliers.SupplierID```
+ ```JOIN Suppliers ON Products.SupplierID == Suppliers.SupplierID```
     
-    ```GROUP BY SupplierName```
+ ```GROUP BY SupplierName```
     
-    ```HAVING NumberOfProducts >= 3```
+ ```HAVING NumberOfProducts >= 3```
     
-    ```ORDER BY AvgPrice DESC```
+ ```ORDER BY AvgPrice DESC```
  
  
