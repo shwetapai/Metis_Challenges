@@ -1,9 +1,10 @@
 **For Challenge 4, after following the directions in the challenge 4 quention,I created new tables using the following lines of code;**
 
-sql_query = '''
-CREATE TABLE test1 AS
+sql_query = 
 
-SELECT  player1 AS name,
+```CREATE TABLE test1 AS```
+
+```SELECT  player1 AS name,
       'M' AS gender,
       'US' AS tournament,
       result AS win,
