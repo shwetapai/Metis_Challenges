@@ -3,7 +3,6 @@
 
 
 ``` SELECT * FROM [Customers] ```
-
 ```WHERE Country = 'UK'  ```
     
     
@@ -69,17 +68,17 @@
     
 **7.Which employee made the most sales (by total cost)?(ANS:Peacock Margaret)**
 
-```SELECT LastName,FirstName,SUM(Price*Quantity) AS TotalSales FROM Orders```
+```SELECT LastName,FirstName,SUM(Price*Quantity) AS TotalSales FROM Orders
 
-   ```JOIN Employees ON Orders.EmployeeID ==Employees.EmployeeID```
+    JOIN Employees ON Orders.EmployeeID ==Employees.EmployeeID
    
-   ```JOIN OrderDetails ON Orders.OrderID == OrderDetails.OrderID```
+    JOIN OrderDetails ON Orders.OrderID == OrderDetails.OrderID
    
-   ```JOIN Products On OrderDetails.ProductID == Products.ProductID```
+   JOIN Products On OrderDetails.ProductID == Products.ProductID
    
-  ``` GROUP BY Employees.EmployeeID```
+   GROUP BY Employees.EmployeeID
   
-  ``` ORDER BY TotalSales DESC ```
+   ORDER BY TotalSales DESC ```
   
   
    
