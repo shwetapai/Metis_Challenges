@@ -1,5 +1,5 @@
 
-**1.Which customers are from the UK **
+**1.Which customers are from the UK?**
 
 
 ``` SELECT * FROM [Customers] ```
