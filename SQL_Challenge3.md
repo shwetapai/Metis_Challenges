@@ -59,16 +59,21 @@
     
     
 **6.What percentage of players prefer their left or right foot? (ANS:75 %)**
- sql_query1= ```SELECT COUNT (id)```
  
-             ```FROM Player_Attributes;```
+ sql_query1= 
+ 
+ ```SELECT COUNT (id)```
+ 
+ ```FROM Player_Attributes;```
              
  
- sql_query2=```SELECT COUNT (preferred_foot)```
+ sql_query2=
  
-              ```FROM Player_Attributes```
+ ```SELECT COUNT (preferred_foot)```
+ 
+ ```FROM Player_Attributes```
               
-              ```WHERE preferred_foot='right'```
+ ```WHERE preferred_foot='right'```
               
               
  %=sql_query2/sql_query1
