@@ -1,11 +1,11 @@
 
-1.** Which customers are from the UK **
+**1.Which customers are from the UK **
 
 ``` SELECT * FROM [Customers] 
-     WHERE Country = 'UK' ```
+    WHERE Country = 'UK'  ```
     
     
-2. What is the name of the customer who has the most orders? (ANS:Ernst Handel)
+** 2. What is the name of the customer who has the most orders? (ANS:Ernst Handel) **
 
 ``` SELECT OrderID, CustomerName, COUNT() AS OrderTimes 
     FROM Orders JOIN Customers ON Orders.CustomerID == Customers.CustomerID 
@@ -13,18 +13,18 @@
     ORDER BY OrderTimes DESC``
     
     
-3.Which supplier has the highest average product price? (ANS:Aux joyeux ecclésiastiques)
+**3.Which supplier has the highest average product price? (ANS:Aux joyeux ecclésiastiques)**
 
 
-```SELECT SupplierName, AVG(Price) AS Average 
+``` SELECT SupplierName, AVG(Price) AS Average 
    FROM Suppliers JOIN Products ON Suppliers.SupplierID == Products.SupplierID
    GROUP BY SupplierName
    ORDER BY Average DESC ```
    
  
-4.How many different countries are all the customers from? (ANS:21)
+**4.How many different countries are all the customers from? (ANS:21)**
 
-```SELECT COUNT (DISTINCT Country) FROM [Customers]```
+``` SELECT COUNT (DISTINCT Country) FROM [Customers] ```
 
 
 5.What category appears in the most orders? (ANS:Dairy Products)
