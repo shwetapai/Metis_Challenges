@@ -2,7 +2,8 @@
 **1.What was the total spent on salaries by each team, each year?**
 
  
- ```SELECT franchises.franchid,franchises.franchname,salaries.yearid, SUM(salaries.salary) AS total_spent
+ ```sql
+    SELECT franchises.franchid,franchises.franchname,salaries.yearid, SUM(salaries.salary) AS total_spent
     FROM salaries
     JOIN franchises ON salaries.teamid = franchises.franchid
     GROUP BY  franchises.franchid, salaries.teamid, salaries.yearid
@@ -39,8 +40,7 @@
    
    ```
 
-   ```sql
-   sql_query = '''SELECT playerid, MIN(yearid) AS first_year, MAX(yearid) AS last_year
+   ``' sql_query='''SELECT playerid, MIN(yearid) AS first_year, MAX(yearid) AS last_year
                   FROM fielding
                   GROUP BY  playerid
                   LIMIT 5;'''
@@ -48,26 +48,22 @@
    pd.read_sql_query(sql_query, cnx)
    ```
 
-3. Who has played the most all star games?
+**3. Who has played the most all star games?** (ANS:aaronha01/ Henry Louis)
 
-   aaronha01/ Henry Louis
 
-   ```sql
-   # question 3
-   sql_query = '''SELECT playerid, COUNT(gameid) AS all_star_games_played
+   ```
+   SELECT playerid, COUNT(gameid) AS all_star_games_played
                   FROM allstarfull
                   GROUP BY  playerid
                   ORDER BY all_star_games_played DESC
-                  LIMIT 5;'''
-   
-   pd.read_sql_query(sql_query, cnx)
+                  LIMIT 5;
    ```
 
 4. Which school has generated the most distinct players? *Hint:* Create new table from 'CollegePlaying.csv'.
 
    There is no 'CollegePlaying.csv' data available in the zip using SchoolsPlayer.csv instead
 
-   ```SQL
+   ```
    CREATE TABLE IF NOT EXISTS schoolsplayers (
    	playerID varchar(20) NOT NULL,
    	schoolID varchar(20) NOT NULL,
