@@ -48,10 +48,10 @@
    pd.read_sql_query(sql_query, cnx)
    ```
 
-**3. Who has played the most all star games?(ANS:aaronha01/ Henry Louis)
+**3. Who has played the most all star games?(ANS:aaronha01/ Henry Louis)**
 
    ```sql
-   # question 3
+
    sql_query = '''SELECT playerid, COUNT(gameid) AS all_star_games_played
                   FROM allstarfull
                   GROUP BY  playerid
