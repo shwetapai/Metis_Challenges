@@ -92,7 +92,8 @@
  **8.Which employees have BS degrees?**
  
  
- ``` .   SELECT * FROM [Employees]
+ ``` .    
+          SELECT * FROM [Employees]
           WHERE Notes Like '%BS%';
  ```
  
