@@ -1,9 +1,13 @@
 
 **1.Which customers are from the UK?**
 
-
-``` SELECT * FROM [Customers] ```
-```WHERE Country = 'UK'  ```
+```
+   sql_query='''SELECT * FROM [Customers] 
+                WHERE Country = 'UK;''''  
+               
+    pd.read_sql_query(sql_query, cnx)
+    
+    ```
     
     
     
