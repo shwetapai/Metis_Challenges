@@ -2,17 +2,14 @@
 **1.What was the total spent on salaries by each team, each year?**
 
  
- ```SELECT franchises.franchid,franchises.franchname,salaries.yearid, SUM(salaries.salary) AS total_spent```
+ ```SELECT franchises.franchid,franchises.franchname,salaries.yearid, SUM(salaries.salary) AS total_spent
+    FROM salaries
+    JOIN franchises ON salaries.teamid = franchises.franchid
+    GROUP BY  franchises.franchid, salaries.teamid, salaries.yearid
+    ORDER BY franchises.franchid, salaries.yearid 
+    LIMIT 5;
     
- ```FROM salaries```
- 
- ```JOIN franchises ON salaries.teamid = franchises.franchid```
- 
- ```GROUP BY  franchises.franchid, salaries.teamid, salaries.yearid``` 
-                  
- ```ORDER BY franchises.franchid, salaries.yearid ```
-                 
- ```LIMIT 5;```
+    ```
    
    
 
